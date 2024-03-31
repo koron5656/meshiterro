@@ -10,6 +10,15 @@ class ApplicationController < ActionController::Base
     about_path
   end
 
+    # 以下を追加
+  #  ---- ここから ----
+  private
+
+  def admin_controller?
+    self.class.module_parent_name == 'Admin'
+  end
+  #  ---- ここまで ----
+
   protected
 
   def configure_permitted_parameters

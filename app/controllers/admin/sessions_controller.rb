@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Admin::SessionsController < Devise::SessionsController
-  # その他...
+  layout 'admin' # ここを追加
 
   protected
 
